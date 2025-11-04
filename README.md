@@ -24,7 +24,7 @@ npm install nestjs-shared-auth
 ## Usage
 1. Import in your AppModule
 ```import { Module } from '@nestjs/common';
-import { JwtAuthSharedModule, JwtAuthGuard } from '@my-microservices/jwt-auth';
+import { JwtAuthSharedModule, JwtAuthGuard } from 'nestjs-shared-auth';
 import { APP_GUARD } from '@nestjs/core';
 import { FormsModule } from './forms/forms.module';
 
@@ -50,7 +50,7 @@ export class AppModule {}
 If you don’t want global auth, you can use the guard per controller:
 ```
 import { Controller, Get, UseGuards } from '@nestjs/common';
-import { JwtAuthGuard } from '@my-microservices/jwt-auth';
+import { JwtAuthGuard } from 'nestjs-shared-auth';
 
 @Controller('leads')
 export class LeadController {
